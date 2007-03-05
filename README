@@ -1,0 +1,21 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1814
+
+This shell script runs Oracle SQL*Plus commands/sql statements in a register from within vim and inserts the results at the location marking the end of the register.
+
+The simplest way to use the script is to install it per the instructions in install details, type your SQL code in the vim editor. For example,
+
+Mark the line starting with column as ... ma
+Go to line starting with select, then ... \sx
+
+column tc format a10
+set linesize 120
+select 'hello' tc from dual;
+
+TC
+----------
+hello
+
+1 row selected.
+
+Anything that you can do on the SQL*Plus command line, you can do from within vim using this script. I have tested it on cygwin and hp/ux.
+
